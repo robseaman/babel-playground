@@ -19,8 +19,8 @@ const readOptions = (fixtureName) => {
     }
     throw err; // any other readfile error is a concern
   }
-  let val;
-  return eval(`val = ${optionsString}`); // allow eval to throw it's own errors
+  let options;
+  return eval(`options = ${optionsString}`); // allow eval to throw it's own errors
 };
 
 const runTransform = (plugin, fixtureName) => {

@@ -10,13 +10,17 @@ yarn
 
 ## Demo apps
 
-The apps are all done with node and use CommonJS so you'll need to do some minor translation to imports/exports for common ES Modules.
+The apps are all done with node and use CommonJS so you'll need to do some minor translation to imports/exports for common ES6 Modules.
 
 - `node src/traverse` has a parse-traverse-generate implementation. Code with and without types is show.
 - `node src/template` shows how to use templates with `syntactic placeholders`.
 - `node src/transform` shows a plugin implementation with types coming from the babel object.
 - `node src/transformFile` shows a plugin implementation with a plugin in the `babel-transform-change-identifier` file that can be used on one more `input.js` files coming from `__tests__/fixtures` folders. The `babel-transform-change-identifier`plugin transform take options and `transformFile` will read the options from one or more optional `options.js` files that correspond to the input files. A vscode debug configuration also exists so that `transformFile.js` or the plugin can be examined and debugged in a normal way.
 - `yarn jest` builds on `transformFile` to run a test suite with text fixtures. There is also a vscode configuration for `jest`. This is really what I wanted out of this playground. How to create a debuggable set of tests that run a set of text fixtures with configurable plugin options that go with the fixtures that is easy to use with Jest. Output is checked against a Jest snapshot. Other options would be to manually create `output.js` files or redirect snapshot output to `output.js` files but the default snapshot behavior seems fine so I'm stopping here.
+
+## Play to Practical
+
+[babel-plugin-ts-starter](https://github.com/robseaman/babel-plugin-ts-starter) was derived directly from the testing support of this playground. The core of this demo code remains but it's a more focussed and complete starter for creating a plugin using TypeScript using ES6 Modules instead of CommonJS.
 
 ## References
 
