@@ -1,0 +1,16 @@
+{
+  "name": "babel-playground",
+  "version": "1.0.0",
+  "description": "place to install and play with babel",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/generator": "^7.10.0",
+    "@babel/parser": "^7.10.0",
+    "@babel/template": "^7.10.0",
+    "@babel/traverse": "^7.10.0",
+    "@babel/types": "^7.10.1",
+    "jest": "^26.0.1"
+  }
+}
